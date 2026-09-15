@@ -12,9 +12,6 @@
             "include": "#registers"
         },
         {
-            "include": "#mnemonics"
-        },
-        {
             "include": "#constants"
         },
         {
@@ -25,6 +22,12 @@
         },
         {
             "include": "#numbers"
+        },
+        {
+            "include": "#mnemonics"
+        },
+        {
+            "include": "#identifiers"
         }
     ],
     "repository": {
@@ -79,6 +82,14 @@
                 }
             ]
         },
+        "identifiers": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.pbasm",
+                    "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+                }
+            ]
+        },
         "flags": {
             "patterns": [
                 {
@@ -98,25 +109,12 @@
         "mnemonics": {
             "patterns": [
                 {
-                    "match": "^\\s*(([a-zA-Z_][a-zA-Z0-9_]*):\\s*)*(?:(jump)\\s+(?:(Z|NZ|C|NC),\\s*)?([a-zA-Z_][a-zA-Z0-9_]*)|([a-zA-Z]+\\d?))(\\s+|$|;)",
+                    "match": "^\\s*(([a-zA-Z_][a-zA-Z0-9_]*):\\s*)*([a-zA-Z]+\\d?)",
                     "captures": {
                         "1": {
                             "name": "entity.name.function.pbasm"
                         },
                         "3": {
-                            "name": "keyword.other.mnemonic.pbasm"
-                        },
-                        "4": {
-                            "patterns": [
-                                {
-                                    "include": "#flags"
-                                }
-                            ]
-                        },
-                        "5": {
-                            "name": "entity.name.function.pbasm"
-                        },
-                        "6": {
                             "name": "keyword.other.mnemonic.pbasm"
                         }
                     }
