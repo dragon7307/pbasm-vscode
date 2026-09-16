@@ -3,7 +3,10 @@
   "displayName": "PicoBlaze Assembly 3 & 6",
   "description": "Language Support for PicoBlaze 3 & 6 Assembly",
   "version": "1.0.0",
-  "repository": "https://github.com/dragon7307/pbasm-vscode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragon7307/pbasm-vscode"
+  },
   "publisher": "draconware",
   "engines": {
     "vscode": "^1.103.0"
