@@ -2,7 +2,7 @@
   "name": "picoblaze-assembly",
   "displayName": "PicoBlaze Assembly 3 & 6",
   "description": "Language Support for PicoBlaze 3 & 6 Assembly",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/dragon7307/pbasm-vscode"
@@ -15,25 +15,16 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [
-      {
-        "id": "psm",
-        "aliases": [
-          "PicoBlaze Assembly",
-          "pbasm"
-        ],
-        "extensions": [
-          ".psm"
-        ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
-    "grammars": [
-      {
-        "language": "psm",
-        "scopeName": "source.psm",
-        "path": "./syntaxes/psm.tmLanguage.json"
-      }
-    ]
+    "languages": [{
+      "id": "psm",
+      "aliases": ["PicoBlaze Assembly", "pbasm"],
+      "extensions": [".psm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "psm",
+      "scopeName": "source.psm",
+      "path": "./syntaxes/psm.tmLanguage.json"
+    }]
   }
 }
